@@ -48,6 +48,11 @@
   --line: #e2dfd8;
   --line-card: #dfdcd5;
   --line-dot: #ddd9d1;
+
+  /* The design's own text measure: at 1120px the main column is 672px wide
+     with 72/64 padding, leaving 536px of content. Holding that measure on
+     wider screens keeps line length and title/date pairing as drawn. */
+  --measure: 560px;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -156,7 +161,7 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 22px;
-  max-width: 56ch;
+  max-width: var(--measure);
 }
 .lede p {
   margin: 0;
@@ -178,6 +183,7 @@ h1 {
   margin-top: clamp(40px, 5vw, 52px);
   border-top: 1px solid var(--line);
   padding-top: 28px;
+  max-width: var(--measure);
 }
 .section .label { display: block; margin-bottom: 20px; }
 
