@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Dr Monique Debauche — Expertise psychiatrique médico-légale, Bruxelles</title>
+<meta name="description" content="Dr Monique Debauche, psychiatre à Bruxelles. Expertises psychiatriques médico-légales et évaluation du dommage psychique après un accident, une agression ou un événement traumatique.">
+<link rel="canonical" href="https://expertpsychiatre.be/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_BE">
+<meta property="og:url" content="https://expertpsychiatre.be/">
+<meta property="og:title" content="Dr Monique Debauche — Expertise psychiatrique médico-légale">
+<meta property="og:description" content="Expertises psychiatriques médico-légales à Bruxelles. Évaluation du dommage psychique, en cadre amiable ou judiciaire.">
+
+<meta name="theme-color" content="#1c3f5c">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+
+<style>
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(./fonts/lora-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(./fonts/lora-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --navy: #1c3f5c;
+  --navy-dark: #12293c;
+  --page: #e9e7e2;
+  --card: #fbfaf7;
+  --rail: #f5f3ee;
+  --ink: #1b1c1e;
+  --ink-soft: #26282b;
+  --muted: #6a675f;
+  --muted-2: #6c6e72;
+  --line: #e2dfd8;
+  --line-card: #dfdcd5;
+  --line-dot: #ddd9d1;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  -webkit-font-smoothing: antialiased;
+  padding: clamp(0px, 4vw, 56px);
+}
+
+a {
+  color: var(--navy);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(28, 63, 92, 0.35);
+}
+a:hover { color: var(--navy-dark); border-bottom-color: var(--navy-dark); }
+a:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 3px;
+  border-bottom-color: transparent;
+}
+
+.sheet {
+  max-width: 1120px;
+  margin: 0 auto;
+  background: var(--card);
+  border: 1px solid var(--line-card);
+}
+
+/* ---------- masthead ---------- */
+
+.masthead {
+  background: var(--navy);
+  color: #f4f2ee;
+  padding: 16px clamp(24px, 6vw, 72px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 6px 24px;
+}
+.masthead__name {
+  font-size: clamp(13px, 2.6vw, 14px);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 400;
+}
+.masthead__role {
+  font-size: clamp(11px, 2.4vw, 12px);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #b9c6d1;
+}
+
+/* ---------- layout ---------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+
+.main {
+  padding: clamp(40px, 6vw, 72px) clamp(24px, 5vw, 64px) clamp(40px, 6vw, 72px) clamp(24px, 6vw, 72px);
+  border-right: 1px solid var(--line);
+}
+
+.rail {
+  padding: clamp(40px, 6vw, 72px) clamp(24px, 6vw, 72px) clamp(40px, 6vw, 72px) clamp(24px, 4vw, 48px);
+  background: var(--rail);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+  .main { border-right: none; }
+  .rail { border-top: 1px solid var(--line); }
+}
+
+/* ---------- main column ---------- */
+
+h1 {
+  margin: 0;
+  font-size: clamp(30px, 4.6vw, 46px);
+  line-height: 1.12;
+  font-weight: 500;
+  letter-spacing: -0.014em;
+  max-width: 15ch;
+}
+
+.rule {
+  width: 64px;
+  height: 2px;
+  background: var(--navy);
+  margin: clamp(24px, 3vw, 32px) 0;
+}
+
+.lede {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  max-width: 56ch;
+}
+.lede p {
+  margin: 0;
+  font-size: clamp(17px, 1.7vw, 19px);
+  line-height: 1.72;
+  color: var(--ink-soft);
+}
+
+.label {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---------- formation ---------- */
+
+.formation {
+  margin-top: clamp(40px, 5vw, 56px);
+  border-top: 1px solid var(--line);
+  padding-top: 28px;
+}
+.formation .label { display: block; margin-bottom: 20px; }
+
+.formation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.formation li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 32px;
+  align-items: baseline;
+  border-bottom: 1px dotted var(--line-dot);
+  padding-bottom: 12px;
+}
+.formation li:last-child { border-bottom: none; padding-bottom: 0; }
+
+.formation__title {
+  font-size: clamp(16px, 1.6vw, 17px);
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.formation__years {
+  font-size: 14px;
+  color: var(--muted);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- rail ---------- */
+
+.rail__block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.rail__block + .rail__block {
+  border-top: 1px solid var(--line);
+  padding-top: 28px;
+  gap: 10px;
+}
+
+.rail__email {
+  font-size: clamp(18px, 2.2vw, 21px);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  word-break: break-word;
+  align-self: flex-start;
+}
+.rail__note {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted-2);
+}
+.rail__linkedin {
+  font-size: 15px;
+  align-self: flex-start;
+  margin-top: 2px;
+}
+.rail__address {
+  margin: 0;
+  font-size: clamp(16px, 1.6vw, 17px);
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+/* ---------- print ---------- */
+
+@media print {
+  body { background: #fff; padding: 0; }
+  .sheet { border: none; max-width: none; }
+  .masthead { background: #fff; color: #000; border-bottom: 1.5px solid #000; }
+  .masthead__role { color: #333; }
+  .grid { grid-template-columns: 1fr; }
+  .main { border-right: none; }
+  .rail { background: #fff; border-top: 1px solid #999; }
+  a { color: #000; border-bottom: none; }
+}
+</style>
+</head>
+
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <p class="masthead__name">Dr Monique Debauche</p>
+    <span class="masthead__role">Psychiatre — Bruxelles</span>
+  </header>
+
+  <div class="grid">
+
+    <main class="main">
+      <h1>Expertise psychiatrique médico-légale</h1>
+      <div class="rule"></div>
+
+      <div class="lede">
+        <p>Je réalise des expertises psychiatriques médico-légales, notamment dans l’évaluation du dommage psychique consécutif à un accident, une agression ou un événement traumatique.</p>
+        <p>Ces expertises peuvent être réalisées dans un cadre amiable ou judiciaire, à la demande d’un avocat, d’un assureur, d’un médecin-conseil ou d’un particulier.</p>
+      </div>
+
+      <section class="formation">
+        <h2 class="label">Formation et titres</h2>
+        <ul>
+          <li>
+            <span class="formation__title">Certificat en psychiatrie médico-légale, ULB</span>
+            <span class="formation__years">2019–2021</span>
+          </li>
+          <li>
+            <span class="formation__title">EMDR, training 1 et 2 + supervision, EMDR Institute of Israel</span>
+            <span class="formation__years">2018–2019</span>
+          </li>
+          <li>
+            <span class="formation__title">Diplôme en sociologie, Department of Sociology, LSE</span>
+            <span class="formation__years">2012–2015</span>
+          </li>
+          <li>
+            <span class="formation__title">Licence en psychiatrie, ULB</span>
+            <span class="formation__years">1989–1994</span>
+          </li>
+          <li>
+            <span class="formation__title">Doctorat en médecine, ULB</span>
+            <span class="formation__years">1982–1989</span>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <aside class="rail">
+      <div class="rail__block">
+        <h2 class="label">Demande d’expertise</h2>
+        <a class="rail__email" href="mailto:contact@expertpsychiatre.be">contact@expertpsychiatre.be</a>
+        <p class="rail__note">Avocats, assureurs, médecins-conseils et particuliers.</p>
+        <a class="rail__linkedin" href="https://be.linkedin.com/in/monique-debauche-863468229">Profil LinkedIn</a>
+      </div>
+
+      <div class="rail__block">
+        <h2 class="label">Cabinet</h2>
+        <p class="rail__address">50 rue de Spa<br>Bruxelles</p>
+      </div>
+    </aside>
+
+  </div>
+</div>
+</body>
+</html>
