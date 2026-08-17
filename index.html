@@ -58,7 +58,6 @@ body {
   color: var(--ink);
   font-family: 'Lora', Georgia, 'Times New Roman', serif;
   -webkit-font-smoothing: antialiased;
-  padding: clamp(0px, 4vw, 56px);
 }
 
 a {
@@ -74,10 +73,10 @@ a:focus-visible {
 }
 
 .sheet {
-  max-width: 1120px;
-  margin: 0 auto;
   background: var(--card);
-  border: 1px solid var(--line-card);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* ---------- masthead ---------- */
@@ -110,7 +109,10 @@ a:focus-visible {
 
 .grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  /* 1.5:1 as designed, but the rail stops growing on wide screens so it
+     doesn't end up a mostly-empty 700px column */
+  grid-template-columns: minmax(0, 1.5fr) minmax(320px, 520px);
+  flex: 1;
 }
 
 .main {
@@ -270,8 +272,8 @@ h1 {
 /* ---------- print ---------- */
 
 @media print {
-  body { background: #fff; padding: 0; }
-  .sheet { border: none; max-width: none; }
+  body { background: #fff; }
+  .sheet { min-height: auto; }
   .masthead { background: #fff; color: #000; border-bottom: 1.5px solid #000; }
   .masthead__role { color: #333; }
   .grid { grid-template-columns: 1fr; }
