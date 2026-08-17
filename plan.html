@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Plan — 50 rue de Spa, Bruxelles</title>
+<link rel="stylesheet" href="./vendor/leaflet/leaflet.css">
+<script src="./vendor/leaflet/leaflet.js"></script>
+<style>
+  html, body { margin: 0; height: 100%; background: #f2f0eb; }
+  #map { position: absolute; inset: 0; }
+  .leaflet-tile-pane { filter: grayscale(1) contrast(1.04) brightness(1.03); }
+  .leaflet-container { background: #f2f0eb; font-family: Georgia, serif; }
+  .leaflet-control-attribution { font-size: 10px; font-family: Georgia, serif; background: rgba(251,250,247,0.86); }
+  .leaflet-control-attribution a { color: #1c3f5c; }
+  .pin-label {
+    font: 500 12px/1.2 Georgia, serif; color: #1c3f5c; background: #fbfaf7;
+    border: 1px solid #1c3f5c; padding: 3px 7px; white-space: nowrap;
+    letter-spacing: 0.04em;
+  }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+  // Coordinates from Nominatim for "50, Rue de Spa - Spastraat, 1000 Bruxelles".
+  var SITE = [50.8472066, 4.3748361];
+  var map = L.map('map', { center: SITE, zoom: 17, scrollWheelZoom: false, zoomControl: true });
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+  L.circleMarker(SITE, {
+    radius: 8, color: '#1c3f5c', weight: 2, fillColor: '#1c3f5c', fillOpacity: 0.85
+  }).addTo(map);
+  L.marker(SITE, {
+    interactive: false,
+    icon: L.divIcon({ className: '', html: '<div class="pin-label">50 rue de Spa</div>', iconSize: null, iconAnchor: [-14, 20] })
+  }).addTo(map);
+</script>
+</body>
+</html>

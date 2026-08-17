@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Dr Monique Debauche — Expertise psychiatrique médico-légale, Bruxelles</title>
-<meta name="description" content="Dr Monique Debauche, psychiatre à Bruxelles. Expertises psychiatriques médico-légales et évaluation du dommage psychique après un accident, une agression ou un événement traumatique.">
+<title>Docteur Monique Debauche — Expertise psychiatrique médico-légale, Bruxelles</title>
+<meta name="description" content="Docteur Monique Debauche, psychiatre à Bruxelles. Expertises psychiatriques médico-légales et évaluation du dommage psychique après un accident, une agression ou tout autre évènement traumatique.">
 <link rel="canonical" href="https://expertpsychiatre.be/">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_BE">
 <meta property="og:url" content="https://expertpsychiatre.be/">
-<meta property="og:title" content="Dr Monique Debauche — Expertise psychiatrique médico-légale">
+<meta property="og:title" content="Docteur Monique Debauche — Expertise psychiatrique médico-légale">
 <meta property="og:description" content="Expertises psychiatriques médico-légales à Bruxelles. Évaluation du dommage psychique, en cadre amiable ou judiciaire.">
 
 <meta name="theme-color" content="#1c3f5c">
@@ -93,8 +93,8 @@ a:focus-visible {
   gap: 6px 24px;
 }
 .masthead__name {
-  font-size: clamp(13px, 2.6vw, 14px);
-  letter-spacing: 0.16em;
+  font-size: clamp(16px, 3.4vw, 22px);
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   margin: 0;
   font-weight: 400;
@@ -170,16 +170,16 @@ h1 {
   color: var(--muted);
 }
 
-/* ---------- formation ---------- */
+/* ---------- sections: activité, formation ---------- */
 
-.formation {
-  margin-top: clamp(40px, 5vw, 56px);
+.section {
+  margin-top: clamp(40px, 5vw, 52px);
   border-top: 1px solid var(--line);
   padding-top: 28px;
 }
-.formation .label { display: block; margin-bottom: 20px; }
+.section .label { display: block; margin-bottom: 20px; }
 
-.formation ul {
+.section ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -187,28 +187,40 @@ h1 {
   flex-direction: column;
   gap: 14px;
 }
-.formation li {
+.section li {
+  border-bottom: 1px dotted var(--line-dot);
+  padding-bottom: 12px;
+}
+.section li:last-child { border-bottom: none; padding-bottom: 0; }
+
+.entry {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 4px 32px;
   align-items: baseline;
-  border-bottom: 1px dotted var(--line-dot);
-  padding-bottom: 12px;
 }
-.formation li:last-child { border-bottom: none; padding-bottom: 0; }
-
-.formation__title {
+.entry__title {
   font-size: clamp(16px, 1.6vw, 17px);
   line-height: 1.5;
   color: var(--ink-soft);
 }
-.formation__years {
+.entry__years {
   font-size: 14px;
   color: var(--muted);
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
 }
+.entry__detail {
+  margin: 5px 0 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* activité entries carry a description line, so they need more room */
+.activite ul { gap: 16px; }
+.activite li { padding-bottom: 16px; }
 
 /* ---------- rail ---------- */
 
@@ -247,6 +259,13 @@ h1 {
   line-height: 1.6;
   color: var(--ink-soft);
 }
+.plan {
+  width: 100%;
+  height: 240px;
+  border: 1px solid var(--line);
+  display: block;
+  margin-top: 6px;
+}
 
 /* ---------- print ---------- */
 
@@ -259,6 +278,7 @@ h1 {
   .main { border-right: none; }
   .rail { background: #fff; border-top: 1px solid #999; }
   a { color: #000; border-bottom: none; }
+  .plan { display: none; }
 }
 </style>
 </head>
@@ -267,7 +287,7 @@ h1 {
 <div class="sheet">
 
   <header class="masthead">
-    <p class="masthead__name">Dr Monique Debauche</p>
+    <p class="masthead__name">Docteur Monique Debauche</p>
     <span class="masthead__role">Psychiatre — Bruxelles</span>
   </header>
 
@@ -278,32 +298,69 @@ h1 {
       <div class="rule"></div>
 
       <div class="lede">
-        <p>Je réalise des expertises psychiatriques médico-légales, notamment dans l’évaluation du dommage psychique consécutif à un accident, une agression ou un événement traumatique.</p>
+        <p>Je réalise des expertises psychiatriques médico-légales, notamment dans l’évaluation du dommage psychique consécutif à un accident, une agression ou tout autre évènement traumatique.</p>
         <p>Ces expertises peuvent être réalisées dans un cadre amiable ou judiciaire, à la demande d’un avocat, d’un assureur, d’un médecin-conseil ou d’un particulier.</p>
       </div>
 
-      <section class="formation">
+      <section class="section activite">
+        <h2 class="label">Activité</h2>
+        <ul>
+          <li>
+            <div class="entry">
+              <span class="entry__title">Expertises psychiatriques</span>
+              <span class="entry__years">Depuis 2018</span>
+            </div>
+            <p class="entry__detail">Indépendant, Bruxelles. Évaluation des dommages psychiques, dont le trouble de stress post-traumatique.</p>
+          </li>
+          <li>
+            <div class="entry">
+              <span class="entry__title">Évaluation de vétérans américains</span>
+              <span class="entry__years">Depuis 2018</span>
+            </div>
+            <p class="entry__detail">Veterans Evaluation Services (USA), missions menées depuis Bruxelles. Trouble de stress post-traumatique et traumatismes crâniens chez des vétérans de l’armée américaine.</p>
+          </li>
+          <li>
+            <div class="entry">
+              <span class="entry__title">Psychiatre</span>
+              <span class="entry__years">Depuis 1994</span>
+            </div>
+            <p class="entry__detail">Pratique privée, Bruxelles.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section formation">
         <h2 class="label">Formation et titres</h2>
         <ul>
           <li>
-            <span class="formation__title">Certificat en psychiatrie médico-légale, ULB</span>
-            <span class="formation__years">2019–2021</span>
+            <div class="entry">
+              <span class="entry__title">Certificat en psychiatrie médico-légale, ULB</span>
+              <span class="entry__years">2019–2021</span>
+            </div>
           </li>
           <li>
-            <span class="formation__title">EMDR, training 1 et 2 + supervision, EMDR Institute of Israel</span>
-            <span class="formation__years">2018–2019</span>
+            <div class="entry">
+              <span class="entry__title">EMDR, training 1 et 2 + supervision, EMDR Institute of Israel</span>
+              <span class="entry__years">2018–2019</span>
+            </div>
           </li>
           <li>
-            <span class="formation__title">Diplôme en sociologie, Department of Sociology, LSE</span>
-            <span class="formation__years">2012–2015</span>
+            <div class="entry">
+              <span class="entry__title">Diplôme en sociologie, Department of Sociology, LSE</span>
+              <span class="entry__years">2012–2015</span>
+            </div>
           </li>
           <li>
-            <span class="formation__title">Licence en psychiatrie, ULB</span>
-            <span class="formation__years">1989–1994</span>
+            <div class="entry">
+              <span class="entry__title">Licence en psychiatrie, ULB</span>
+              <span class="entry__years">1989–1994</span>
+            </div>
           </li>
           <li>
-            <span class="formation__title">Doctorat en médecine, ULB</span>
-            <span class="formation__years">1982–1989</span>
+            <div class="entry">
+              <span class="entry__title">Doctorat en médecine, ULB</span>
+              <span class="entry__years">1982–1989</span>
+            </div>
           </li>
         </ul>
       </section>
@@ -320,6 +377,8 @@ h1 {
       <div class="rail__block">
         <h2 class="label">Cabinet</h2>
         <p class="rail__address">50 rue de Spa<br>Bruxelles</p>
+        <iframe class="plan" src="./plan.html" loading="lazy"
+                title="Plan du cabinet, 50 rue de Spa, Bruxelles"></iframe>
       </div>
     </aside>
 
